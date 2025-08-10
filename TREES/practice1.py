@@ -2,7 +2,8 @@
 class TreeNode:
     # create a init method
     # initialize the attributes with default values
-    # setting a attribute with a default value and not setting others =, will throw an error
+    # setting a attribute with a default value and not setting others, will throw an error
+    # set default arguments after non default arguments
     
     # ERROR:
     # Non-default argument follows default argument
@@ -22,7 +23,7 @@ class Tree:
         if not root:
             return []
         
-        # recursively print the left subtrees + root + right subtrees
+        # recursively returns a list of values of the left subtrees + root + right subtrees
         return (
             self.in_order(root.left) +
             [root.val] +
@@ -47,5 +48,15 @@ root.right.right = TreeNode(7)
 
 # create a instance of the Tree class
 tree = Tree()
-# call the function with the instance of TreeNode class
+# call the function with the root node
+# class Tree {
+#     in_order(root)
+# }
+# operates on
+# class TreeNode {
+#     int val
+#     TreeNode left
+#     TreeNode right
+# }
+
 print(tree.in_order(root))
