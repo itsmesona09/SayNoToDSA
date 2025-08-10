@@ -11,7 +11,7 @@ class Tree:
         node = TreeNode(data)
         if not self.root:
             self.root = node
-            return
+            return 
         
         parentNode = self.findNode(parent_data, self.root)
         if not parentNode:
