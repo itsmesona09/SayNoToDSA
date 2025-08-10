@@ -13,8 +13,6 @@ class Tree:
             self.root = node
             return
         
-        # if tree is empty, it sets the new node as root
-        # otherwise searches for the parent node with value parent_data
         parentNode = self.findNode(parent_data, self.root)
         if not parentNode:
             print("Parent node not found")
