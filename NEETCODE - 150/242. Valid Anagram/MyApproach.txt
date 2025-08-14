@@ -1,0 +1,4 @@
+1. Using sort()
+- sort the two strings
+- compare string 1 and string 2, if equal, return True
+- else return False

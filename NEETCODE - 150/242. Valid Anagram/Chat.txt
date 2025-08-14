@@ -1,0 +1,46 @@
+1. Sorting
+Idea:
+If two strings are anagrams, their sorted character sequences will be identical.
+
+Steps:
+- Sort both strings.
+- Compare them.
+- If equal → return True, else False.
+
+TC => O(n logn)
+O(n logn) - because sorting requires n logn time
+O(n) - compare the sorted array
+
+SC => O(1)
+
+----------------------------------------------------------------------
+
+2. Hash Map / Frequency Count
+Idea:
+Two strings are anagrams if they have the same number of each character.
+
+Steps:
+- Count frequency of each character in both strings.
+- Compare the frequency maps.
+
+TC => O(n)
+O(n) - counting requires n time
+
+SC => O(1)
+doesn't need any external space
+
+----------------------------------------------------------------------
+
+3. Manual Array Count (Most Optimal)
+Idea:
+If only lowercase English letters are used, we can use a fixed-size array instead of a hash map.
+
+Steps:
+- Create a 26-length array.
+- Increment for characters in s, decrement for characters in t.
+- If all counts are zero → anagram.
+
+TC => O(n)
+
+SC => O(1)
+O(1) - to create a fixed size of the array

@@ -1,5 +1,6 @@
 1. Hash Set
 Idea: Use a set to track numbers we've seen.
+
 Process:
 - Iterate over nums
 - If a number is already in the set → return true
@@ -29,9 +30,10 @@ O(n) - Python's built in sort() or sorted() function uses Timsort, a combination
 
 3. Sorting
 Idea: If duplicates exist, they’ll be next to each other after sorting.
+
 Process:
-Sort the array
-Check adjacent elements
+- Sort the array
+- Check adjacent elements
 
 TC => O(n logn)
 O(n logn) - Sorting requires n logn time
