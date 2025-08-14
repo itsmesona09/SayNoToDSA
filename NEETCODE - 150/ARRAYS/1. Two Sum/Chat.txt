@@ -1,0 +1,31 @@
+1. Two Loops:
+Idea:
+Check every possible pair of numbers until we find the one that sums to the target
+
+TC => O(n^2)
+SC => O(1)
+
+----------------------------------------------------------------------
+
+2. Hash Map
+Idea:
+- Store visited numbers in a dictionary mapping number → index.
+- For each number, check if target - number is already in the map.
+
+TC => O(n)
+O(n) - we are looping through all the elements in the array
+
+SC => O(n)
+O(n) - to stores elements in hashmap
+
+----------------------------------------------------------------------
+
+3. Two Pointers (Sorted Input)
+Idea:
+- If the array is sorted, use two pointers from left and right ends to find the sum.
+- But if the array is unsorted, this won’t give correct indices unless you store original indices before sorting.
+
+TC => O(n)
+O(n) - we are looping through the elements in an array
+
+SC => O(1)

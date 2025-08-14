@@ -1,0 +1,26 @@
+1. Using two for loops
+- Loop through each elements in the array
+- check whether it matches the target value
+- if yes, return True
+
+TC => O(n^2)
+O(n^2) - uses a loop inside another loop (loop of loop = n x n)
+
+SC => O(1)
+
+----------------------------------------------------------------------
+
+2. Using Two pointer approach
+- if the array is sorted, we can use Two Pointer approach
+- else, sort the array
+- assign left and right pointers at 0 and (length of array - 1)th position
+- calculate the sum
+- if the sum is equal to the target, return [left, right]
+- else if sum is lesser than the target, move the left pointer to the next position
+- else if sum is greater than the target, move the right pointer to the previous pointer
+- if not found return [-1, -1]
+
+TC => O(n)
+O(n) - each pointer moves at n steps
+
+SC => O(1)
