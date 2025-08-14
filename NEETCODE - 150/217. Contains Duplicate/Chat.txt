@@ -1,0 +1,61 @@
+1. Hash Set
+Idea: Use a set to track numbers we've seen.
+Process:
+- Iterate over nums
+- If a number is already in the set → return true
+- Else, add it to the set
+
+TC => O(n)
+SC => O(m)
+
+----------------------------------------------------------------------
+
+2. Compare Length of Set vs List
+Idea: If there are duplicates, converting nums to a set will reduce its length.
+
+TC => O(n)
+O(n) - set creation takes O(n) time
+
+SC => O(n)
+O(n) - Python's built in sort() or sorted() function uses Timsort, a combination of merge sort and insertion sort
+     - Breaking the array into smaller runs
+     - Sorting the parts
+     - Merging them together
+
+     - Sometimes, merging requires a temporary array to hold the part while merging
+     - It can also take the whole size of the array at worst case
+
+----------------------------------------------------------------------
+
+3. Sorting
+Idea: If duplicates exist, they’ll be next to each other after sorting.
+Process:
+Sort the array
+Check adjacent elements
+
+TC => O(n logn)
+O(n logn) - Sorting requires n logn time
+O(n) - check the adjacent element
+
+SC => O(n)
+
+----------------------------------------------------------------------
+
+4. COMPARING USING FOR LOOP
+Idea: Compare each pair of elements.
+
+TC => O(n^2)
+O(n^2) - using two loops to check the elements
+
+SC => O(1)
+
+----------------------------------------------------------------------
+
+5. Using a Dictionary (Frequency Count)
+Idea: Track counts of each element with a dictionary.
+
+TC => O(n)
+- looping through the array 
+
+SC => O(n)
+- using hashmap to store the elements

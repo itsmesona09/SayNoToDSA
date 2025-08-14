@@ -1,0 +1,73 @@
+1. Using Sort()
+- Sort the given array
+- Then assign first element of the array to a temp variable
+- loop from index 1 to the length of the array using a for loop
+- check if the previous element that is stored in the temporary variable equals the current element in the array
+- if equal, return True (no need break after this as return exits the loop if the condition satisfies)
+- if not equal, assign the current element to the temporary variable, and move to the next element
+
+TC => O(n logn) + O(n) = O(n logn)
+O(n logn): for sorting
+O(n): to check the previous element
+
+SC - O(1)
+
+----------------------------------------------------------------------
+
+2. Using Hashmap() - {}
+- initialize a hashmap {}
+- loop through the elements of the array using for loop
+- check if the element has already been added to the hashmap or not
+
+a)
+- if already added, increment the counter of that element
+hm[nums[i]] = hm.get(nums[i], 0) + 1
+- using for loop iterate through the hashmap, and check if the value of the key nums[i] is greater than 1
+- if greater, return True
+
+b) 
+- if already added, return True
+
+TC => O(n)
+O(n) - iterate through the array once
+
+SC => O(n)
+O(n) - storing elements in a hashmap
+
+----------------------------------------------------------------------
+
+3. Using hashmap() - defaultdict(int)
+- initialize a hashmap using defaultdict(int)
+- loop through the elements of the array using for loop
+- check if the element has already been added to the hashmap or not
+
+a)
+- if already added, increment the counter of that element
+hm[nums[i]] += 1
+- using for loop iterate through the hashmap, and check if the value of the key nums[i] is greater than 1
+- if greater, return True
+
+b) 
+- if already added, return True
+
+TC => O(n)
+O(n) - iterate through the array once
+
+SC => O(n)
+O(n) - storing elements in a hashmap
+
+----------------------------------------------------------------------
+
+4. Using Two Pointer:
+- sort the array
+- initialize two pointers left and right at indices 0 and 1 respectively
+- check if the two pointers are equal
+- if equal, return True
+- else move the pointers to the next index
+
+TC => O(n logn)
+O(n logn) - sorting the array
+O(n) - iterating through the array once
+
+SC => O(1)
+O(1) - using constant pointers
