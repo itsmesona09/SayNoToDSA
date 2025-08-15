@@ -1,0 +1,33 @@
+1. Using slicing operator
+- slice into left and right parts leaving the current ith element
+- calculate the products of left and right parts
+- append it to the array at ith position
+
+TC => O(n)
+O(n) - looping through the array once
+
+SC => O(n)
+O(n) - to store the products in an array
+
+----------------------------------------------------------------------
+
+2. Using the products from left and right directions
+- initialize a left and right traversal arrays with 1 of size length of the array
+- for left, start with the index 1 to the last element
+- calculate the product of the previously calculated product with the before element of the ith position
+- ie left[i-1] * nums[i-1]
+
+- for right, start from the 2th position from the last of the array
+- calculate the product of the next calculated product with the next position of the array
+- ie right[i+1] * nums[i+1]
+
+- using a for loop of size n ie length of the array, calculate the product of the ith position of both left and right array
+- append the product into an array
+
+
+TC => O(n)
+O(n) - looping through the array once
+
+SC => O(n)
+
+----------------------------------------------------------------------
