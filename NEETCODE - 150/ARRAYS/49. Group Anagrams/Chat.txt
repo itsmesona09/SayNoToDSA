@@ -1,0 +1,33 @@
+1. Sorting Each String (Most Common)
+Idea:
+- Sort the characters of each word.
+- All anagrams will share the same sorted result. Use that sorted string as a dictionary key.
+
+Steps:
+- Create a hashmap (dict or defaultdict(list)).
+- For each word, sort it → key = ''.join(sorted(word)).
+- Append the original word to hm[key].
+- Return all dictionary values.
+
+TC => O(n * k logk)
+O(k logk) - for sorting the string word where k is the maximum word length
+O(n) - for n words in a array
+
+SC => O(n * k)
+O(n) - n grouped word in string array
+O(k) - maximum word length
+
+----------------------------------------------------------------------
+
+2. Character Count as Key (Optimized)
+Idea:
+- Instead of sorting (which is O(klogk)), count letters and use the count tuple as the key.
+Example: "eat" → (1,0,0,0,1,0,...) for a-z.
+
+Steps:
+- Create a hashmap.
+- For each word, create a 26-length list of character counts.
+- Convert it to a tuple and use it as the key.
+- Append to hm[key].
+
+TC => O(n * k)

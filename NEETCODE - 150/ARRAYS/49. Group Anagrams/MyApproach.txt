@@ -1,0 +1,30 @@
+1. Using hashmap
+- initialize a hashmap {}
+- loop through all the strings in the array using a for loop
+- find the sorted string for that character of that particular iteration
+- find for all string, whether the sorted string is seen in the hashmap
+- if seen, append the word to the list
+- else, create a new list with that word
+- loop through the hashmap, and append the key values to an array and add the final array to the resultant array
+
+TC => O(n * k logk)
+O(k logk) - for sorting the array, k - maximum word length
+O(m) - total number of strings
+
+SC => O(n * k)
+O(n) - hashmap is used to store the array elements
+
+----------------------------------------------------------------------
+
+2. Use Array
+- Loop through the array, and for each string, store it in a temporary variable
+- sort the string 
+- check if the string has already been in that array
+- if present append the original string to the array
+- check upto the last index and append the array to the resultant array
+
+TC => O(n)
+O(n) - looping through the array once
+
+SC => O(n)
+O(n) - storing string elements in an array
