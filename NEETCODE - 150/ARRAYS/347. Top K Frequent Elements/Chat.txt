@@ -1,0 +1,43 @@
+1: Sorting by Frequency (O(n log n))
+Idea:
+- Count the frequency of each number using a dictionary or collections.Counter.
+- Sort the items by frequency in descending order.
+- Take the first k elements.
+
+TC = O(n + m log m) => O(n log n) if m is the number of unique elements and n is the length of the array, which is the case here.
+
+SC = O(n) to store the frequencies in a hashmap (dict)
+
+----------------------------------------------------------------------
+
+2: Heap / Priority Queue (O(n log k))
+Idea:
+- Count frequencies with a hash map.
+- Use a min-heap of size k to keep track of the top k frequencies.
+
+TC = O(n + k log k)
+SC = O(k) where k is the size of the heap/priority queue.'
+
+----------------------------------------------------------------------
+
+3: Bucket Sort (O(n))
+Idea:
+- Count frequencies.
+- Create a list of buckets, where index = frequency, and store numbers in that bucket.
+- Traverse buckets from high freq to low until you collect k elements.
+
+TC = O(n + m) where m is the range of frequencies
+
+SC = O(n) where n is the range of frequencies
+
+----------------------------------------------------------------------
+
+4: Quick select (Average O(n))
+Idea:
+- Count frequencies.
+- Use Quick select to partition the array of unique elements by frequency so that the top k are found without full sorting.
+- Similar to quicksort but only works on average O(n).
+
+TC = O(n + k log k)
+
+SC = O(k)

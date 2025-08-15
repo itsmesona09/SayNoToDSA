@@ -1,0 +1,24 @@
+1. Using hashmap
+- Hashmap stores data in key - value pairs
+- key will be of hashable data type (content cannot be changed)
+- value need not be hashable
+- here, key is the unique elements and the value is the number of occurrences of that element
+- if the element is seen in a hashmap, we are going to increase the counter of that key which is the element by 1 for each iteration in a loop
+- if the element is not seen ie a new element, we are going to add the element in to the hashmap with the value 1
+- we have created a hashmap with key as unique elements in an array and value as the frequency of that element
+- sort the hashmap items with the value, in reverse order
+- initialize a array to store the k no of top frequently occurred elements
+- using a for loop iterating through the hashmap items, append the key of the hashmap until the length of the array equals the give k value
+- return the resultant array
+
+TC => O(n + m logm)
+O(n) - looping through the elements in an array, where n is the number of elements in an array
+O(m logm) - sort the hashmap items by frequency, where m is the number of unique elements
+O(m) - looping through the items in the hashmap, where m is the number of unique elements / key in hashmap
+
+SC => O(m + k)
+O(m) - storing the key, value pairs in a hashmap, where m is the number of key, value pairs
+O(k) - storing the k no of elements in an array, k is the given size
+
+----------------------------------------------------------------------
+
