@@ -1,0 +1,15 @@
+1. Using Binary Search
+- initialize two pointers left at 0th index and right at (n-1)th index
+- using while loop to check if the low <= high
+- find the mid value (low + high) // 2
+- if the mid value equals the target value, return the indices
+- else if the mid value is lesser than target, then move the left pointer to the next position of the mid
+- else if the mid value is greater than target, then move the right pointer to the previous position of the mid
+- if the target is not found, return [-1, -1]
+
+
+TC => O(logn)
+
+SC => O(1)
+
+----------------------------------------------------------------------
