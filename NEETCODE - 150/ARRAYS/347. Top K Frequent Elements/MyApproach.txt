@@ -22,3 +22,11 @@ O(k) - storing the k no of elements in an array, k is the given size
 
 ----------------------------------------------------------------------
 
+2. Using heap:
+- Count the frequency of the elements of the array
+- using (-freq, num) pair from hashmap, to add the elements in the heap
+- use heapify from heapq, to create a max heap
+- PYTHON'S DEFAULT IS MIN HEAP => so to convert min heap to max heap, we multiplied -1 to the frequency of the number
+- for k items, we pop the elements from the heap and store it in an array
+
+----------------------------------------------------------------------

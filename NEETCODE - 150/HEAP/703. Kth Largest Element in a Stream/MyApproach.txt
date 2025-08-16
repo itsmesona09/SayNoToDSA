@@ -1,0 +1,34 @@
+1. Using sorting
+- initialize the k and nums in the __init__ method
+- in the add method, append the values to the nums array
+- sort the nums array in ascending order
+- return the length of nums - k th element from the array
+
+
+TC => O(n log n)
+O(n log n) - sorting requires n log n time
+
+SC => O(1)
+
+----------------------------------------------------------------------
+
+2. Using Heap:
+- initialize k
+- initialize the nums array as heap ;)
+- using heapq's heapify, create a heap for this given array
+- in the add method, push the value to the heap, and then it heapifies using heappush
+- heappush accepts two arguments, place where the value should be inserted and also the value that is to be inserted
+- by default, python creates a min heap
+- until the length of the heap equals the value of k, pop the minimum element from the heap uisng heappop(heap)
+- if the length of the heap equals the kth value, return the 0th index value
+- as the smallest element of that heap will be at the 0th index in case of min heap
+
+TC => O(log k)
+O(log k) - to insert and delete an element from heap
+O(1) - to retrieve the 0th index element
+
+
+SC => O(k)
+O(k) - space complexity of the heap
+
+----------------------------------------------------------------------
