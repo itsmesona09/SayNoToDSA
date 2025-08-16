@@ -1,0 +1,13 @@
+1. Using hashmap
+- initialize a hashmap {}
+- iterate through the nums array
+- for each element, find the complement of that element (target - nums[i])
+- check if that complement is in the hashmap
+- if present return the complements position + 1 and the ith position + 1
+- else add the element with the index position
+
+
+TC => O(n)
+SC => O(n)
+
+----------------------------------------------------------------------

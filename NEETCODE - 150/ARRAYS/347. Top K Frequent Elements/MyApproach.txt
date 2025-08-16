@@ -29,4 +29,13 @@ O(k) - storing the k no of elements in an array, k is the given size
 - PYTHON'S DEFAULT IS MIN HEAP => so to convert min heap to max heap, we multiplied -1 to the frequency of the number
 - for k items, we pop the elements from the heap and store it in an array
 
+TC => O(n + m logk)
+O(n) - looping through the elements in an array
+O(m logk) - heapify the heap, where m is the number of unique elements in the array and k is the given size
+O(k) - popping the elements from the heap
+
+SC => O(m + k)
+O(m) - storing the key, value pairs in a hashmap
+O(k) - storing the k no of elements in an array
+
 ----------------------------------------------------------------------

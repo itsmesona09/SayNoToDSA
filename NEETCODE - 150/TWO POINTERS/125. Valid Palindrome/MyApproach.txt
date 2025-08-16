@@ -1,0 +1,13 @@
+1. Using regular expression
+- replace all the characters other than a-z or A-Z or 0-9 with ''
+- convert the string to lower case
+- check if the reverse of that string matches the original string
+- if matches, return True else False
+
+TC => O(n)
+O(n) - looping through the string once
+
+SC => O(1)
+O(1) - using constant space
+
+----------------------------------------------------------------------
