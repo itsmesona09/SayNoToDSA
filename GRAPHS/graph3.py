@@ -10,9 +10,7 @@ class Graph:
                 self.graph[start] = [end]
         return self.graph
     
-    def print_path(self, start, end, path=None):
-        # sourcery skip: for-append-to-extend, simplify-generator
-        
+    def print_path(self, start, end, path=None):        
         if path is None:
             path = []
 
