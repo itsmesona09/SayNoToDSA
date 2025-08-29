@@ -1,24 +1,35 @@
 class Solution:
     def reverseList(self, head):
-        stack = []
         curr = head
+        prev = None
         
         while curr:
-            stack.append(curr)
-            curr = curr.next
+            temp = curr.next
+            curr.next = prev
+            prev = curr
+            curr = temp
             
-        if not stack:
-            return None
+        return prev
+    
+        # stack = []
+        # curr = head
         
-        newhead = stack.pop()
-        curr = newhead
-        while stack:
-            curr.next = stack.pop()
-            curr = curr.next
+        # while curr:
+        #     stack.append(curr)
+        #     curr = curr.next
+            
+        # if not stack:
+        #     return None
         
-        curr.next = None
+        # newhead = stack.pop()
+        # curr = newhead
+        # while stack:
+        #     curr.next = stack.pop()
+        #     curr = curr.next
         
-        return newhead
+        # curr.next = None
+        
+        # return newhead
             
 class ListNode:
     def __init__(self, val=0, next=None):
